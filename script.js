@@ -11,24 +11,10 @@
 // text.style.color='white';
 
 
+var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
 
-
-
-// })
-
-const nightModeButton = document.getElementById('nightModeButton');
-const stylesheet = document.getElementById('stylesheet');
-
-let nightMode = false;
-
-nightModeButton.addEventListener('click', function() {
-    nightMode = !nightMode;
-
-    if (nightMode) {
-        stylesheet.href = 'night-mode.css'; // Change the stylesheet to night mode
-        document.body.classList.add('night-mode'); // Add night mode class to body
-    } else {
-        stylesheet.href = 'styles.css'; // Change back to the default stylesheet
-        document.body.classList.remove('night-mode'); // Remove night mode class from body
-    }
-});
